@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "2a1b877b-f8b2-4419-b0ff-b87693c9ffbd",
+		"name": "Inteia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"operador\",\r\n    \"contrasena\": \"123456\",\r\n    \"nombres\": \"Operador\",\r\n    \"apellidos\": \"Prueba\",\r\n    \"rol_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"shelvinbb\",\r\n    \"contrasena\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/city/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"city",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stops",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Av. NQS - Calle 66\",\r\n    \"latitud\": \"4.661081183077425\",\r\n    \"longitud\": \"-74.07686575703555\",\r\n    \"ciudad_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/stops/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"stops",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Routes",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ruta 1\",\r\n    \"origen\": \"Nueva Zelandia\",\r\n    \"destino\": \"Barrio Unidos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/routes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"routes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Stop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dia_semana\": 0,\r\n    \"hora_llegada\": \"08:15\",\r\n    \"hora_salida\": \"08:20\",\r\n    \"parada_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/routes/1/add-stop/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"routes",
+								"1",
+								"add-stop",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details Route",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/routes/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"routes",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Routes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwidXN1YXJpbyI6InNoZWx2aW5iYiIsImNvbnRyYXNlbmEiOiJlMTBhZGMzOTQ5YmE1OWFiYmU1NmUwNTdmMjBmODgzZSIsIm5vbWJyZXMiOiJTaGVsdmluIiwiYXBlbGxpZG9zIjoiQmF0aXN0YSIsInJvbCI6eyJpZCI6MSwibm9tYnJlIjoiT3BlcmFkb3IgbG9nXHUwMGVkc3RpY28ifX0.z5wdgE8DGHWN3xmXyrzhtkJHHHXt9qV0NTghwjQGCRc",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/routes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"routes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Stops by Route",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MywidXN1YXJpbyI6Im9wZXJhZG9yIiwiY29udHJhc2VuYSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwibm9tYnJlcyI6Ik9wZXJhZG9yIiwiYXBlbGxpZG9zIjoiUHJ1ZWJhIiwicm9sIjp7ImlkIjoyLCJub21icmUiOiJQYXNhamVybyJ9fQ.EaC_2I1nHFuR-wxDJhwKoXLXvv8YxodoeNpMXBfezB0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/api/routes/1/stops/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"routes",
+								"1",
+								"stops",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
